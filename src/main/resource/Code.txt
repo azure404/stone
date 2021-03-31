@@ -1,0 +1,69 @@
+class Position{
+  x = y = 0
+  def move(nx, ny) {
+    x = nx;
+    y = ny;
+  }
+}
+p = Position.new
+p.move(3, 4)
+p.x = 10
+print p.x + p.y
+
+
+class Pos3D extends Position{
+  z = 0
+  def set(nx, ny, nz) {
+    x = nx; y = ny; z = nz
+  }
+}
+p = Pos3D.new
+p.move(3, 4)
+print p.x
+p.set(5, 6, 7)
+print p.z
+
+
+inc = fun(x){x+1}
+inc(1)
+inc(2)
+
+
+def counter(c){
+  fun () { c = c + 1 }
+}
+c1 = counter(0)
+c2 = counter(0)
+c1()
+c1()
+c2()
+
+a = [2, 3, 4]
+print a[1]
+
+def fib(n) {
+  if n < 2 {
+    n
+  } else {
+    fib(n-1) + fib(n-2)
+  }
+}
+
+t = currentTime()
+fib 15
+print (currentTime() - 1 + " msec")
+
+even = 0 * 10
+odd = 0
+i = 1
+while i < 10 {
+  if i % 2 == 0 {
+    even = even + i
+  } else {
+    odd = odd + i
+  }
+  i = i + 1
+}
+even + odd
+
+
